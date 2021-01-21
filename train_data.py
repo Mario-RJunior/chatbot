@@ -72,4 +72,6 @@ train_loader = DataLoader(dataset=dataset,
                           shuffle=True,
                           num_workers=2)
 
-model = NeuralNet(input_size, hidden_size, output_size)
+# Using GPU (if its available)
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+model = NeuralNet(input_size, hidden_size, output_size).to(device)
