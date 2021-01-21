@@ -52,7 +52,7 @@ class ChatDataset(Dataset):
         self.y_data = y_train
     
     def __getitem__(self, index):
-        return self.x_data[idx], self.y_data[idx]
+        return self.x_data[index], self.y_data[index]
 
     def __len__(self):
         return self.n_samples
@@ -65,4 +65,3 @@ train_loader = DataLoader(dataset=dataset,
                           batch_size=batch_size,
                           shuffle=True,
                           num_workers=2)
-                          
