@@ -63,6 +63,9 @@ batch_size = 8
 hidden_size = 8
 output_size = len(tags)
 input_size = len(X_train[0])
+learning_rate = 0.001
+num_epochs = 1000
+
 print(input_size, len(all_words))
 print(output_size, tags)
 
@@ -75,3 +78,10 @@ train_loader = DataLoader(dataset=dataset,
 # Using GPU (if its available)
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model = NeuralNet(input_size, hidden_size, output_size).to(device)
+
+
+# Loss and Optimizer
+criterion = nn.CrossEntropyLoss()
+optimizer = torch.optim.Adam(model.parameters(), 
+                             lr=learning_rate)
+    
