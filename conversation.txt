@@ -1,14 +1,14 @@
-You:ei
+You: ei
 Mina: Hello, thanks for visiting
-You:what does the store sell?
+You: what does the store sell?
 Mina: We have coffee and tea
-You:how long it takes to deliver?
+You: how long it takes to deliver?
 Mina: Delivery takes 2-4 days
-You:ok. thanks
+You: ok. thanks
 Mina: Happy to help!
-You:bye
+You: bye
 Mina: Bye! Come back again soon.
-You:quit
+You: quit
 You: Oi
 Mina: Hey :-)
 You: I'd like to know how long it takes to deliver
