@@ -1,0 +1,11 @@
+You:ei
+Mina: Hello, thanks for visiting
+You:what does the store sell?
+Mina: We have coffee and tea
+You:how long it takes to deliver?
+Mina: Delivery takes 2-4 days
+You:ok. thanks
+Mina: Happy to help!
+You:bye
+Mina: Bye! Come back again soon.
+You:quit
