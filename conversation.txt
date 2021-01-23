@@ -9,3 +9,13 @@ Mina: Happy to help!
 You:bye
 Mina: Bye! Come back again soon.
 You:quit
+You: Oi
+Mina: Hey :-)
+You: I'd like to know how long it takes to deliver
+Mina: Shipping takes 2-4 days
+You: ok. Thanks
+Mina: Any time!
+You: So long
+You: Bye
+Mina: Bye! Come back again soon.
+You: quit
