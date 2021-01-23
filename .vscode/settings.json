@@ -1,3 +1,6 @@
 {
-    "python.pythonPath": "C:\\Users\\mjuni\\Anaconda3\\envs\\chatbot-pytorch\\python.exe"
+    "python.pythonPath": "C:\\Users\\mjuni\\Anaconda3\\envs\\chatbot-pytorch\\python.exe",
+    "code-runner.executorMap": {
+        "python": "C:\\Users\\mjuni\\Anaconda3\\envs\\chatbot-pytorch\\python.exe",
+    }
 }
