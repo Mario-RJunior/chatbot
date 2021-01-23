@@ -27,25 +27,32 @@ bot_name = 'Mina'
 
 print("Let's chat! type 'quit' to exit")
 while True:
-    sentence = input('You: ')
-    if sentence == 'quit':
-        break
 
-    sentence = tokenize(sentence)
-    X = bag_of_word(sentence, all_words)
-    X = X.reshape(1, X.shape[0])
-    X = torch.from_numpy(X)
+    with open('conversation.txt', 'a', encoding='utf8') as conv:
+        sentence = input('You: ')
+        conv.write('You: ' + sentence)
+        conv.write('\n')
+        if sentence == 'quit':
+            break
 
-    output = model(X)
-    _, predicted = torch.max(output, dim=1)
-    tag = tags[predicted.item()]
+        sentence = tokenize(sentence)
+        X = bag_of_word(sentence, all_words)
+        X = X.reshape(1, X.shape[0])
+        X = torch.from_numpy(X)
 
-    probs = torch.softmax(output, dim=1)
-    prob = probs[0][predicted.item()]
+        output = model(X)
+        _, predicted = torch.max(output, dim=1)
+        tag = tags[predicted.item()]
 
-    if prob.item() > 0.85:
-        for intent in intents['intents']:
-            if tag == intent['tag']:
-                print(f'{bot_name}: {random.choice(intent["responses"])}')
-    else:
-        print(f'{bot_name}: I do not understand...')
+        probs = torch.softmax(output, dim=1)
+        prob = probs[0][predicted.item()]
+
+        if prob.item() > 0.85:
+            for intent in intents['intents']:
+                if tag == intent['tag']:
+                    bot_answer = f'{bot_name}: {random.choice(intent["responses"])}'
+                    print(bot_answer)
+                    conv.write(bot_answer)
+                    conv.write('\n')
+        else:
+            print(f'{bot_name}: I do not understand...')
