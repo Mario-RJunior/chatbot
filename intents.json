@@ -76,19 +76,32 @@
       ]
     },
     {
-      "tag": "delivery",
+      "tag": "delivery_time",
       "patterns": [
         "How long does delivery take?",
         "How long does shipping take?",
-        "When do I get my delivery?",
-        "Do you provide a delivery service?",
-        "Do you deliver at home?"
+        "When do I get my delivery?"
       ],
       "responses": [
         "Delivery takes 2-4 days",
         "Shipping takes 2-4 days",
+        "It takes 2 - 4 days"
+      ]
+    },
+    {
+      "tag": "delivery_question",
+      "patterns": [
+        "Do you provide a delivery service?",
+        "Do you deliver at home?",
+        "Do you deliver?",
+        "Deliver?",
+        "Is the order delivered?",
+        "Can I order delivery?"
+      ],
+      "responses": [
         "Yes, we sure provide delivery service.",
-        "Yes, we deliver all over the city."
+        "Yes, we deliver all over the city.",
+        "We sure deliver your order."
       ]
     },
     {
