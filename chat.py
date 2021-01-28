@@ -26,6 +26,8 @@ model.eval()
 bot_name = 'Mina'
 
 print("Hi, I'm Mina ;) \nWhat can I do for you? type 'quit' to exit")
+print()
+
 while True:
 
     with open('conversation.txt', 'a', encoding='utf8') as conv:
